@@ -2,6 +2,7 @@ from turtle import Screen
 from keyboardturtle import KeyboardTurtle
 from clickableturtle import ClickableTurtle
 from movingturtle import MovingTurtle
+from wallturtle import WallTurtle
 
 
 # set up instance of the screen
@@ -25,6 +26,15 @@ player_2.other_player = player_1
 
 moveT = MovingTurtle(screen_width)
 
+
+# Make Wall turtle
+wall_1 = WallTurtle()
+player_1.wall.append(wall_1)
+wall_2 = WallTurtle(200, 200)
+player_1.wall.append(wall_2)
+
+
+# HAS TO BE LAST! (Below)
 # This is needed to listen for inputs
 window.listen()
 window.mainloop()

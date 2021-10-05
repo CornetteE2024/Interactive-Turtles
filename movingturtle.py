@@ -22,7 +22,7 @@ class MovingTurtle(Turtle):
     ontimer(self.move_self, 1)
 
   def at_edge(self):
-    if self.xcor() > self.width/2 or self.xcor() < -self.width/2:
+    if self.xcor() >= self.width/2 or self.xcor() <= -self.width/2:
       return True
     else:
       return False

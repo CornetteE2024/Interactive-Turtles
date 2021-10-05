@@ -19,6 +19,7 @@ class KeyboardTurtle(Turtle):
     self.other_player = other_player
     self.turn_left = turn_left
     self.back = back
+    self.wall = []
 
     #set turtle starting states
     self.shape("turtle")
@@ -33,12 +34,16 @@ class KeyboardTurtle(Turtle):
 
     #sets up controlling variables (y not implemented)
     self.movement_speed = 20
-    self.turn_speed = 50
+    self.turn_speed = 30
     self.collision_distance = 10
 
   # Movement Methods
   def go_forward(self):
     self.forward(self.movement_speed)
+    for w in self.wall:
+      if self.check_collision(w):
+        print("Hit wall!")
+        quit()
     if self.check_collision(self.other_player):
       print("Crash!")
       quit()
