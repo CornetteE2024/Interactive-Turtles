@@ -31,7 +31,7 @@ moveT = MovingTurtle(screen_width)
 
 
 # Make Wall turtle
-wall_1 = WallTurtle(-275, -50, 1, 3)
+wall_1 = WallTurtle(-275, -25, 1, 3)
 wall_list.append(wall_1)
 wall_2 = WallTurtle(0, 190, 1, 30)
 wall_list.append(wall_2)
@@ -41,6 +41,10 @@ wall_4 = WallTurtle(-290, 0, 20, 1)
 wall_list.append(wall_4)
 wall_5 = WallTurtle(285, 0, 20, 1)
 wall_list.append(wall_5)
+wall_6 = WallTurtle(-275, 25, 1, 3)
+wall_list.append(wall_6)
+wall_7 = WallTurtle(-250, 45, 3, 1)
+wall_list.append(wall_7)
 
 
 # HAS TO BE LAST! (Below)
