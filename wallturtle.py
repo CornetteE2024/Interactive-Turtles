@@ -1,22 +1,22 @@
 from turtle import Turtle, Screen
 
+
 class WallTurtle(Turtle):
-  def __init__(self, 
-               x = -275, 
-               y = -50):
+  def __init__(self, x, y, x_size, y_size):
     Turtle.__init__(self)
-    self.shape("square")
-    self.shapesize(3, 1, 1)
+
 
     # Sets up incoming variables
+    self.window = Screen()
     self.x = x
     self.y = y
-    self.window = Screen()
+    self.x_size = x_size
+    self.y_size = y_size
+
 
    #set turtle starting states
     self.shape("square")
-    self.shapesize(1,3,1)
+    self.shapesize(self.x_size, self.y_size)
     self.color("black")
     self.penup()
-    self.setx(self.x)
-    self.sety(self.y)
+    self.goto(self.x, self.y)
