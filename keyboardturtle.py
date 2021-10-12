@@ -56,7 +56,7 @@ class KeyboardTurtle(Turtle):
     # Check for collision with walls
     if self.walls != None:
       for wall in self.walls:
-        if self.check_collision(wall):
+        if self.check_wall_collision(wall):
           collided = True
           break
       if collided:
@@ -95,6 +95,18 @@ class KeyboardTurtle(Turtle):
     else:
       return False
 
+  def check_wall_collision(self, obj_to_check):
+    turtle_rad = 10
+    wall_rad = 10
+    distance_x = obj_to_check.xcor() - self.xcor()
+    distance_x = abs(distance_x)
 
+    distance_y = obj_to_check.ycor() - self.ycor()
+    distance_y = abs(distance_y)
+
+    if distance_x < turtle_rad + (wall_rad * obj_to_check.y_size) and distance_y < turtle_rad + (wall_rad * obj_to_check.x_size):
+      return True
+    else:
+      return False
     # TODO: finish setting up the inputs (left and down)
     
