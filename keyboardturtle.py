@@ -34,9 +34,9 @@ class KeyboardTurtle(Turtle):
     self.window.onkey(self.go_back, self.back)
 
     #sets up controlling variables (y not implemented)
-    self.movement_speed = 20
+    self.movement_speed = 10
     self.turn_speed = 30
-    self.collision_distance = 10
+    self.collision_distance = 1
 
   # Movement Methods
   def go_forward(self):
