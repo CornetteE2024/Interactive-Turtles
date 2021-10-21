@@ -18,24 +18,27 @@ button = ClickableTurtle()
 wall_list = []
 
 #set up players
-player_1 = KeyboardTurtle(window, walls = wall_list)
-player_2 = KeyboardTurtle(window, "w", "d", "a", "s")
+Ren = KeyboardTurtle(window, walls = wall_list)
+Sire = KeyboardTurtle(window, "w", "d", "a", "s")
 
-player_1.goto(-270,0)
-player_2.goto(0,-100)
+Ren.goto(-270,0)
+Sire.goto(0,-100)
 
 # set target of other player(our collison check) to the opposite player
-player_1.other_player = player_2
-player_2.other_player = player_1
+Ren.other_player = Sire
+Sire.other_player = Ren
 
 moveT = MovingTurtle(screen_width)
 
 
 # Make Wall turtle
-wall_20 = WallTurtle(-160, 17.5, .75, 5)
-wall_list.append(wall_20)
-wall_21 = WallTurtle(-121, 77.5, 7, .75)
-wall_list.append(wall_21)
+
+wall_29 = WallTurtle(-6, -56.5, .75, 6)
+wall_list.append(wall_29)
+wall_30 = WallTurtle(-6, -136.5, .75, 6)
+wall_list.append(wall_30)
+wall_31 = WallTurtle(43, -96.5, 5, .75)
+wall_list.append(wall_31)
 
 
 
@@ -63,10 +66,8 @@ wall_11 = WallTurtle(-250, 125, 3, .75)
 wall_list.append(wall_11)
 wall_12 = WallTurtle(-210, 145, .75, 5)
 wall_list.append(wall_12)
-
 wall_13 = WallTurtle(-170, 105, 5, .75)
 wall_list.append(wall_13)
-
 wall_14 = WallTurtle(-200, -25, 5.25, .75)
 wall_list.append(wall_14)
 wall_15 = WallTurtle(-222.3, -67, .75, 3.3)
@@ -79,7 +80,24 @@ wall_18 = WallTurtle(-180, -115, .75, 3)
 wall_list.append(wall_18)
 wall_19 = WallTurtle(-160, -127.5, 2.25, .75)
 wall_list.append(wall_19)
-
+wall_20 = WallTurtle(-160, 17.5, .75, 5)
+wall_list.append(wall_20)
+wall_21 = WallTurtle(-121, 77.5, 7, .75)
+wall_list.append(wall_21)
+wall_22 = WallTurtle(-96, 137, .75, 3.5)
+wall_list.append(wall_22)
+wall_23 = WallTurtle(-71, 55, 9.25, .75)
+wall_list.append(wall_23)
+wall_24 = WallTurtle(-103, -27.5, .75, 5.75)
+wall_list.append(wall_24)
+wall_25 = WallTurtle(-151, -46.5, 3, .75)
+wall_list.append(wall_25)
+wall_26 = WallTurtle(-131, -66.5, .75, 3)
+wall_list.append(wall_26)
+wall_27 = WallTurtle(-111, -96.5, 4, .75)
+wall_list.append(wall_27)
+wall_28 = WallTurtle(-56, -106.5, 9, .75)
+wall_list.append(wall_28)
 
 # HAS TO BE LAST! (Below)
 # This is needed to listen for inputs
