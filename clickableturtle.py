@@ -1,11 +1,9 @@
 from turtle import Turtle, Screen
-import os
 
 class ClickableTurtle(Turtle):
   # our 'wrapper' class of the Turtle class
   def __init__(self, 
-               name = "Log",
-               name2 = "start",
+               name = "Log", 
                x = 0 , 
                y = -100):
     # Runs Keyboard Turtle Constructor as well as the Turtle Constructor
@@ -13,7 +11,6 @@ class ClickableTurtle(Turtle):
     
     # Sets up incoming variables
     self.name = name
-    self.name2 = name2
     self.x = x
     self.y = y
     self.window = Screen()
@@ -42,9 +39,6 @@ class ClickableTurtle(Turtle):
     name = "Injured Log"
     if name == "Injured Log":
       print ("Log has sunk!")
-
-  def click2(self, x, y):
-    os.system("python3 main.py")
 
   # TODO:  
   # 1) Change the button color 
